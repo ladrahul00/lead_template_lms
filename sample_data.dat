@@ -1,0 +1,25 @@
+# New Temmplate Sample
+
+{
+    "name": "TemplateOne",
+    "keyValueTypes": [
+        {
+            "key": "key1",
+            "valueType": "String"
+        },
+        {
+            "key": "key2",
+            "valueType": "String"
+        },
+        {
+            "key": "key3",
+            "valueType": "String"
+        }
+    ]
+}
+
+# All status filter
+
+{
+    "status": "ACTIVE"
+}

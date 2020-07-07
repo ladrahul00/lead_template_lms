@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package go.micro.service.lead_template;
+
+service Lead_template {
+	rpc create(NewLeadTemplateRequest) returns (NewLeadTemplateResponse) {}
+	rpc get(LeadTemplateByIdRequest) returns (LeadTemplateResponse) {}
+	rpc all(AllLeadTemplateRequest) returns (LeadTemplateListResponse) {}
+}
+
+message AllLeadTemplateRequest {
+	string status = 1;
+}
+
+message NewLeadTemplateRequest {
+	string name = 1;
+	message KeyValue {
+		string key = 1;
+		string valueType = 2;
+	}
+	repeated KeyValue keyValueTypes = 2;
+}
+
+message NewLeadTemplateResponse {
+	string message = 1;
+	bool status = 2;
+}
+
+message LeadTemplateByIdRequest {
+	string templateId = 1;
+}
+
+message LeadTemplateResponse {
+	string id = 1;
+	string name = 2;
+	message KeyValue {
+		string key = 1;
+		string valueType = 2;
+	}
+	repeated KeyValue keyValueTypes = 3;
+}
+
+message LeadTemplateListResponse {
+	repeated LeadTemplateResponse leadTemplates = 1;
+}
