@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/wolf00/golang_lms/lead_template/db"
-	"github.com/wolf00/golang_lms/lead_template/db/models"
+	"github.com/wolf00/lead_template_lms/db"
+	"github.com/wolf00/lead_template_lms/db/models"
 
-	lead_template "github.com/wolf00/golang_lms/lead_template/proto/lead_template"
+	lead_template "github.com/wolf00/lead_template_lms/proto/lead_template"
 
 	log "github.com/micro/go-micro/v2/logger"
 
