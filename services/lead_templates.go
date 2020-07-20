@@ -30,6 +30,7 @@ func (c *LeadTemplateService) LeadTeamplateByID(ctx context.Context, req *lead_t
 	respLeadTemplate := c.leadTemplateToLeadTemplateResponse(leadTemplate)
 	rsp.Name = respLeadTemplate.Name
 	rsp.KeyValueTypes = respLeadTemplate.KeyValueTypes
+	rsp.Id = respLeadTemplate.Id
 	return nil
 }
 

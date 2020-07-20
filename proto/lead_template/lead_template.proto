@@ -3,9 +3,9 @@ syntax = "proto3";
 package go.micro.service.lead_template;
 
 service Lead_template {
-	rpc create(NewLeadTemplateRequest) returns (NewLeadTemplateResponse) {}
-	rpc get(LeadTemplateByIdRequest) returns (LeadTemplateResponse) {}
-	rpc all(AllLeadTemplateRequest) returns (LeadTemplateListResponse) {}
+	rpc Create(NewLeadTemplateRequest) returns (NewLeadTemplateResponse) {}
+	rpc Get(LeadTemplateByIdRequest) returns (LeadTemplateResponse) {}
+	rpc All(AllLeadTemplateRequest) returns (LeadTemplateListResponse) {}
 }
 
 message AllLeadTemplateRequest {

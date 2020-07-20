@@ -60,7 +60,7 @@ func NewLeadTemplateService(name string, c client.Client) LeadTemplateService {
 }
 
 func (c *leadTemplateService) Create(ctx context.Context, in *NewLeadTemplateRequest, opts ...client.CallOption) (*NewLeadTemplateResponse, error) {
-	req := c.c.NewRequest(c.name, "LeadTemplate.create", in)
+	req := c.c.NewRequest(c.name, "LeadTemplate.Create", in)
 	out := new(NewLeadTemplateResponse)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -70,7 +70,7 @@ func (c *leadTemplateService) Create(ctx context.Context, in *NewLeadTemplateReq
 }
 
 func (c *leadTemplateService) Get(ctx context.Context, in *LeadTemplateByIdRequest, opts ...client.CallOption) (*LeadTemplateResponse, error) {
-	req := c.c.NewRequest(c.name, "LeadTemplate.get", in)
+	req := c.c.NewRequest(c.name, "LeadTemplate.Get", in)
 	out := new(LeadTemplateResponse)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
@@ -80,7 +80,7 @@ func (c *leadTemplateService) Get(ctx context.Context, in *LeadTemplateByIdReque
 }
 
 func (c *leadTemplateService) All(ctx context.Context, in *AllLeadTemplateRequest, opts ...client.CallOption) (*LeadTemplateListResponse, error) {
-	req := c.c.NewRequest(c.name, "LeadTemplate.all", in)
+	req := c.c.NewRequest(c.name, "LeadTemplate.All", in)
 	out := new(LeadTemplateListResponse)
 	err := c.c.Call(ctx, req, out, opts...)
 	if err != nil {
